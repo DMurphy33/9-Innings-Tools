@@ -1,8 +1,0 @@
-pandas
-numpy
-opencv-python-headless
-stqdm
-streamlit
-paddlepaddle
-paddleocr
-pillow
