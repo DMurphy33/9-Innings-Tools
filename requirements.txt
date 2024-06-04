@@ -1,8 +1,8 @@
 pandas
 numpy
-opencv-python
-opencv-contrib-python
+opencv-python-headless
 stqdm
 streamlit
 paddlepaddle
 paddleocr
+pillow
