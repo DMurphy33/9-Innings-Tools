@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "ovr-analysis"
+version = "0.1.0"
+description = ""
+authors = ["Dennis Murphy <dennismurphyjr33@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^1.26.4"
+pandas = "^2.2.2"
+streamlit = "^1.35.0"
+paddlepaddle = "^2.6.1"
+paddleocr = "^2.7.3"
+pillow = "^10.3.0"
+stqdm = "^0.0.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
