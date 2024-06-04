@@ -1402,6 +1402,17 @@ files = [
 numpy = {version = ">=1.21.2", markers = "python_version >= \"3.10\" or python_version >= \"3.9\" and platform_system == \"Darwin\" and platform_machine == \"arm64\""}
 
 [[package]]
+name = "opencv-fixer"
+version = "0.2.5"
+description = "Fix OpenCV Issue for numpy, diffusers, etc."
+optional = false
+python-versions = "*"
+files = [
+    {file = "opencv_fixer-0.2.5-py3-none-any.whl", hash = "sha256:90d6f4c5768bd910e3a4dd8ace299feb9e99b7b36f1d6a5ddd926ca6f74a03af"},
+    {file = "opencv_fixer-0.2.5.tar.gz", hash = "sha256:96597ab28a277c5dc3c1409c110b7cd17ec80fb539fd0ea46426da7d808e84e9"},
+]
+
+[[package]]
 name = "opencv-python"
 version = "4.6.0.66"
 description = "Wrapper package for OpenCV python bindings."
@@ -2941,4 +2952,4 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "63737d4537615860e4a0a4ad489ec6d29a1fd45ea72f887ef6b2312ceafd30c9"
+content-hash = "4e1226deaa1433465b904f80fcc91369314b342940991dd2b3636bf8e5e8edbf"

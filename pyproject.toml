@@ -15,6 +15,7 @@ paddleocr = "^2.7.3"
 pillow = "^10.3.0"
 stqdm = "^0.0.5"
 opencv-python-headless = "^4.10.0.82"
+opencv-fixer = "^0.2.5"
 
 
 [build-system]
