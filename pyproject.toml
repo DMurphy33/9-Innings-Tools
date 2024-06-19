@@ -18,6 +18,12 @@ opencv-python-headless = "^4.10.0.82"
 opencv-fixer = "^0.2.5"
 
 
+[tool.poetry.group.dev.dependencies]
+jupyterlab = "^4.2.2"
+ruff = "^0.4.9"
+poetry = "^1.8.3"
+pre-commit = "^3.7.1"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
