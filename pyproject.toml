@@ -16,6 +16,7 @@ pillow = "^10.3.0"
 stqdm = "^0.0.5"
 opencv-python-headless = "^4.10.0.82"
 opencv-fixer = "^0.2.5"
+st-pages = "^1.0.1"
 
 
 [tool.poetry.group.dev.dependencies]
