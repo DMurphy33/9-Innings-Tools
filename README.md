@@ -1,5 +1,15 @@
-# 9 Innings OVR Analysis
+# 9 Innings Tools
 
-Tool for reading screenshots of 9 Innings OVR Analysis stats and aggregating them into a single table.
+A collection of tools for the MLB 9 Innings mobile game.
 
-Try it yourself! https://9-innings-ovr-analysis.streamlit.app/
+Try it yourself! https://9-innings-tools.streamlit.app/
+
+## Tools available
+
+### OVR Analysis
+
+Read screenshots of 9 Innings OVR Analysis stats and aggregate them into a single table.
+
+### Blue/Green Success Chances
+
+Calculate the chances that you will be able to get specific skills with a green or blue based on how many tickets you have.
