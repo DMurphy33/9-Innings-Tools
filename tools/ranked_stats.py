@@ -1,7 +1,10 @@
+from datetime import datetime
+
 import numpy as np
 import pandas as pd
 import streamlit as st
 from paddleocr import PaddleOCR
+from PIL import Image
 from stqdm import stqdm
 
 from utils.screenshot_reader import read_image
@@ -35,6 +38,19 @@ def create_stat_table(img):
     stats = get_stats(img)
     stats = np.array(stats).reshape(-1, len(cols))
     return pd.DataFrame(stats, columns=cols)
+
+
+def get_image_date(img_path):
+    metadata = Image.open(img_path)._getexif()
+    try:
+        date = metadata[36867]
+    except KeyError:
+        return None
+    return datetime.strptime(date, "%Y:%m:%d %H:%M:%S").date()
+
+
+def clean_stat_table(stat_table):
+    return stat_table[stat_table.Player.apply(lambda x: any([c.isalpha() for c in x]))]
 
 
 def fix_pitcher_types(stats):
@@ -121,7 +137,9 @@ if process_screenshots:
     for file in stqdm(files):
         img = read_image(file)
         stat_table = create_stat_table(img)
+        stat_table = clean_stat_table(stat_table)
         player_type = get_player_type(img)
+        stat_table["date"] = get_image_date(file)
 
         if player_type == "batter":
             batter_data = pd.concat((batter_data, stat_table), ignore_index=True)
@@ -132,11 +150,29 @@ if process_screenshots:
 
 if len(pitcher_data):
     pitcher_data = fix_pitcher_types(pitcher_data)
+    pitcher_data = pd.concat(
+        [
+            pitcher_data.groupby(["Player", "date"])
+            .apply(lambda x: x.mode())
+            .reset_index(drop=True),
+            pitcher_data[pitcher_data.date.isna()],
+        ],
+        ignore_index=True,
+    )
     st.header("Pitcher Data")
     pitcher_data
 
 if len(batter_data):
     batter_data = fix_batter_types(batter_data)
+    batter_data = pd.concat(
+        [
+            batter_data.groupby(["Player", "date"])
+            .apply(lambda x: x.mode())
+            .reset_index(drop=True),
+            batter_data[batter_data.date.isna()],
+        ],
+        ignore_index=True,
+    )
     st.header("Batter Data")
     batter_data
 
