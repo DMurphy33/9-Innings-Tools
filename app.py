@@ -5,8 +5,12 @@ st.title("9 Innings Tools")
 
 pages = st.navigation(
     [
-        st.Page("tools/ovr_analysis.py", title="OVR Analysis"),
-        st.Page("tools/ticket_probs.py", title="Blue/Green Success Chances"),
+        st.Page("tools/ovr_analysis.py", title="OVR Analysis", url_path="ovr_analysis"),
+        st.Page(
+            "tools/ticket_probs.py",
+            title="Blue/Green Success Chances",
+            url_path="blue_green_chances",
+        ),
     ]
 )
 
