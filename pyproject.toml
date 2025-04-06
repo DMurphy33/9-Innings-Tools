@@ -1,30 +1,21 @@
-[tool.poetry]
-name = "ovr-analysis"
+[project]
+name = "9-innings-tools"
 version = "0.1.0"
-description = ""
-authors = ["Dennis Murphy <dennismurphyjr33@gmail.com>"]
+description = "A collection of tools for the MLB 9 Innings mobile game."
 readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.2.4",
+    "opencv-fixer>=0.2.5",
+    "opencv-python-headless>=4.11.0.86",
+    "paddleocr>=2.10.0",
+    "paddlepaddle>=3.0.0",
+    "pandas>=2.2.3",
+    "pillow>=11.1.0",
+    "st-pages>=1.0.1",
+    "stqdm>=0.0.5",
+    "streamlit>=1.44.1",
+]
 
-[tool.poetry.dependencies]
-python = "^3.11"
-numpy = "^1.26.4"
-pandas = "^2.2.2"
-streamlit = "^1.35.0"
-paddlepaddle = "^2.6.1"
-paddleocr = "^2.7.3"
-pillow = "^10.3.0"
-stqdm = "^0.0.5"
-opencv-python-headless = "^4.10.0.82"
-opencv-fixer = "^0.2.5"
-st-pages = "^1.0.1"
-
-
-[tool.poetry.group.dev.dependencies]
-jupyterlab = "^4.2.2"
-ruff = "^0.4.9"
-poetry = "^1.8.3"
-pre-commit = "^3.7.1"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+dev = ["jupyterlab>=4.4.0", "pre-commit>=4.2.0", "ruff>=0.11.4", "uv>=0.6.12"]
