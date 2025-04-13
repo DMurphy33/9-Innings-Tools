@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+    ports:
+      - 8080:80
+    restart: always
