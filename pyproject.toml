@@ -5,6 +5,7 @@ description = "A collection of tools for the MLB 9 Innings mobile game."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "google-generativeai>=0.8.4",
     "numpy>=2.2.4",
     "opencv-fixer>=0.2.5",
     "opencv-python-headless>=4.11.0.86",
