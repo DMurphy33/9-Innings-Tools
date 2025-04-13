@@ -6,9 +6,9 @@ Try it yourself! https://9innings-tools.streamlit.app/
 
 ## Tools available
 
-### OVR Analysis
+### Stats Parser
 
-Read screenshots of 9 Innings OVR Analysis stats and aggregate them into a single table.
+Read screenshots of your player stats from either Ranked or OVR Analysis and aggregate them into a single table.
 
 ### Blue/Green Success Chances
 
