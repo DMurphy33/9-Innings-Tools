@@ -9,4 +9,4 @@ RUN apt-get update -y && \
 
 RUN uv sync
 
-CMD ["uv", "run", "streamlit", "run", "app.py", "--server.port", "80", "--server.address", "0.0.0.0"]
+CMD ["uv", "run", "streamlit", "run", "app.py", "--server.port", "80", "--server.address", "0.0.0.0", "--server.headless", "true"]
