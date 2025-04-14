@@ -19,6 +19,7 @@ if player_type == "Pitcher":
         "The Last Boss",
         "Cleaning Up Your Mess",
         "Pitching Coordinator",
+        "Crossfire",
         "The Untouchable",
         "Groundballer",
         "Iron Will",
