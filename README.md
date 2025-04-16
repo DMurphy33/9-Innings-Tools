@@ -2,7 +2,7 @@
 
 A collection of tools for the MLB 9 Innings mobile game.
 
-Try it yourself! https://9innings-tools.streamlit.app/
+Try it yourself! https://9inningstools.app/
 
 ## Tools available
 
