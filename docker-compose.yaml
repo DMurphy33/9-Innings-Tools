@@ -4,5 +4,5 @@ services:
     environment:
       - GOOGLE_API_KEY=${GOOGLE_API_KEY}
     ports:
-      - 80:80
+      - 8501:80
     restart: always
