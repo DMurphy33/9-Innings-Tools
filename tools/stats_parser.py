@@ -61,7 +61,7 @@ def get_player_type(stats: pd.DataFrame) -> PlayerType:
 
 genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
 
-model = genai.GenerativeModel("gemini-2.5-pro-exp-03-25")
+model = genai.GenerativeModel("gemini-2.5-flash")
 
 
 st.title("Stats Parser")
